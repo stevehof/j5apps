@@ -4,8 +4,42 @@
     <script type="text/javascript" src="{{ url_for('static', filename='filter_str.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='jquery-2.1.0.js') }}"></script>
     <title>J5 Apps</title>
+    <style>
+        body{
+            background-color: #ECECEC;
+            font-family: Arial;
+            margin:0;
+        }
+        #main_content{
+            margin: 0 auto;
+            width:800px;
+
+        }
+        #main_header {
+            height:50px;
+            background-color: rgb(79, 131, 223);
+            margin: 0 0 10px 0;
+            text-align: center;
+            padding-top:10px;
+            color:#ECECEC;
+            font-weight:150px;
+            font-size:1.1em;
+            font-s
+        }
+        .app_title{
+            font-weight:200;
+            text-align: right;
+            padding: 0 5px 5px 0;
+        }
+        .app_content{
+
+        }
+    </style>
 </head>
 <body>
+    <div id="main_header">Home &nbsp; Filter String &nbsp; Power Alert Feeder &nbsp; App1 &nbsp; App2</div>
+    <div id="main_content">
     {{ body }}
+    </div>
 </body>
 </html>
