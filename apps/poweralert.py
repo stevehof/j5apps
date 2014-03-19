@@ -1,5 +1,5 @@
 __author__ = 'Steve'
-from App import DefaultApp
+from default_app import DefaultApp
 from feedparser import parse
 
 class poweralert(DefaultApp):
@@ -11,5 +11,5 @@ class poweralert(DefaultApp):
         super(poweralert,self).__init__(title, template)
 
     def get_app(self, context=dict()):
-        context["feed"] = "<br>".join(["<b>%s</b>: %s" % (feed["title"].split("PowerAlert")[0].strip(),feed["description"]) for feed in self.feed["entries"]])
+        context["feed"] = "<br>".join(["<b>%s</b>: <a href='%s'>%s</a>" % (feed["title"].split("PowerAlert")[0].strip(),feed['link'],feed["description"]) for feed in self.feed["entries"]])
         return super(poweralert,self).get_app(context)

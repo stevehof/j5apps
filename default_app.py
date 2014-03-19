@@ -1,7 +1,7 @@
 __author__ = 'Steve'
 
 from jinja2 import Template, Environment, PackageLoader
-env = Environment(loader=PackageLoader('App','templates'))
+env = Environment(loader=PackageLoader('default_app','templates'))
 
 class DefaultApp ():
 
