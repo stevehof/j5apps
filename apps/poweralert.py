@@ -4,7 +4,7 @@ from feedparser import parse
 
 class poweralert(DefaultApp):
 
-    def __init__ (self):
+    def __init__ (self, *args, **kwargs):
         title = "Power Alert"
         template = "poweralert.html"
         self.feed = parse("http://poweralert.co.za/poweralert5/rss.xml" )

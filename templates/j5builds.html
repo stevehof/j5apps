@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<ul>
+{%  for file in files %}
+    <li><a href="{{ file.href }}">{{ file.filename }}</a></li>
+    {% endfor %}
+</ul>
+</body>
+</html>

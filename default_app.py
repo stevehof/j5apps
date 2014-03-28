@@ -5,7 +5,7 @@ env = Environment(loader=PackageLoader('default_app','templates'))
 
 class DefaultApp ():
 
-    def __init__(self, title= "Untitled", template=None):
+    def __init__(self, title= "Untitled", template=None,config=None):
         self.title = title
         self.template = env.get_template(template)
 
