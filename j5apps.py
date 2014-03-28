@@ -3,7 +3,11 @@ from jinja2 import Template, Environment, PackageLoader
 import imp
 import sys
 import os
-import configparser
+try:
+    import ConfigParser as configparser
+except:
+    import configparser
+
 
 sys.path.append(os.path.dirname(__file__))
 env = Environment(loader=PackageLoader('j5apps', 'templates'))
